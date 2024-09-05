@@ -13,5 +13,5 @@ import './js/projects';
 import './js/faq';
 import './js/covers';
 import './js/reviews';
-import './js/menu';
+import './js/header-menu';
 import './js/work-together';
