@@ -1,0 +1,57 @@
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  display: block;
+}
+
+body {
+  font-family: 'Inter Tight', sans-serif;
+  color: rgba(252, 249, 249, 0.4);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.04em;
+  background-color: #1c1d20;
+}
+.container {
+  min-width: 320px;
+  max-width: 375px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+button {
+  cursor: pointer;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1376px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .section {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+}
