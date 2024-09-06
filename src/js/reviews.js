@@ -1,7 +1,6 @@
 import axios from "axios";
-// import Swiper from "swiper";
 import Swiper from 'swiper/bundle';
-import 'swiper/swiper-bundle.css';
+
 
 
 const reviewList = document.querySelector(".reviews-list");
@@ -44,6 +43,18 @@ const initializeReviews = async () => {
     const swiper = new Swiper('.swiper', {
       slidesPerView: 4,       // Set number of slides to show
       spaceBetween: 10,       // Space between slides
+       breakpoints: {
+      
+      320: {
+        slidesPerView: 1, 
+      },
+      768: {
+        slidesPerView: 2, 
+      },
+      1280: {
+        slidesPerView: 4,
+      },
+    },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -66,15 +77,9 @@ function initSwiper() {
     loop: true,
     slidesPerView: 4,
     spaceBetween: 16, 
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    mousewheel: true,
-    keyboard: true,
   });
 }
