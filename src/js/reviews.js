@@ -1,9 +1,9 @@
 import axios from "axios";
+import iziToast from "izitoast";
 import Swiper from 'swiper/bundle';
 
-
-
 const reviewList = document.querySelector(".reviews-list");
+const swiperControllButton = document.querySelector(".swiper-controll-buttons");
 
 // Set axios base URL
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study';
@@ -39,47 +39,46 @@ const initializeReviews = async () => {
     // Render reviews
     renderCard(data);
 
-    // Initialize Swiper after rendering
-    const swiper = new Swiper('.swiper', {
-      slidesPerView: 4,       // Set number of slides to show
-      spaceBetween: 10,       // Space between slides
-       breakpoints: {
+    // Initialize Swiper
+    const swiperReviews = new Swiper('.swiper', {
+      slidesPerView: 1,       
+      spaceBetween: 16,   
       
-      320: {
-        slidesPerView: 1, 
+      breakpoints: {
+        768: {
+          slidesPerView: 2, 
+        },
+        1440: {
+          slidesPerView: 4,
+        },
       },
-      768: {
-        slidesPerView: 2, 
-      },
-      1280: {
-        slidesPerView: 4,
-      },
-    },
+
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+
+      keyboard: {
+        enabled: true,       
+        onlyInViewport: true 
+      },
+
+      grabCursor: true,       
+      mousewheel: {
+        invert: false,       
       },
     });
-  } catch (error) {
-    console.error("Error fetching reviews:", error);
+  }
+  catch (error) {
+    iziToast.error({
+      title: 'Error',
+      position: 'topCenter',
+      message: `Error fetching reviews: ${error}`,
+    });
+    
+    reviewList.insertAdjacentHTML('beforeend', `<p class="reviews-error-text">Not found</p>`);
+    swiperControllButton.classList.add('is-hidden');
   }
 };
 
-// Call the function to initialize the reviews and swiper
 initializeReviews();
-
-function initSwiper() {
-  new Swiper('.swiper', {
-    loop: true,
-    slidesPerView: 4,
-    spaceBetween: 16, 
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-}

@@ -1,4 +1,5 @@
 @import 'swiper/swiper-bundle.css';
+@import 'izitoast/dist/css/iziToast.css';
 .swiper{
     height: 100%;
 }
@@ -13,10 +14,11 @@ color: rgba(250, 250, 250, 0.4);
 }
 .reviews-list{
     display: flex;
-    /* gap: 16px; */
+    margin-bottom: 80px;
 }
+
 .reviews-list-item{
-    width: calc((100% - 48px) / 4);
+    width: 344px;
     padding: 32px 24px;
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 20px;
@@ -24,7 +26,6 @@ color: rgba(250, 250, 250, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 100px;
 }
 .reviews-list-item-img{
     margin-bottom: 32px;
@@ -50,31 +51,71 @@ color: rgba(250, 250, 250, 0.4);
 }
 .swiper-controll-buttons{
     position: absolute;
-    top: 90%;
-    left: calc(50% - (68px + 10px));
+    top: calc(100% - 31px);
+    left: calc(50% - (52px + 6px));
     display: flex;
-    gap: 20px;
+    gap: 12px;
 }
+/* ======================================= Error fetching ==================== */
+.swiper-controll-buttons.is-hidden {
+    display: none;
+}
+.reviews-error-text{
+    text-align: center;
+    justify-self: center;
+    margin: 30px auto 40px auto;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: rgba(250, 250, 250, 0.5);;
+    letter-spacing: -0.02em;
+}
+
 .swiper-button-prev,
 .swiper-button-next{
     box-sizing: border-box;
     position: static;
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
-    padding: 18px;
-    width: 68px;
-    height: 68px;
+    padding: 14px;
+    width: 52px;
+    height: 52px;
+    justify-content: center;
+    align-items: center;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
     display: none;
 }
+.swiper-button-prev-icon{
+    transform: rotate(180deg);
+    width: 24px;
+    height: 24px;
+}
+.swiper-button-next-icon{
+    width: 24px;
+    height: 24px;
+}
 
-/* @media screen and (min-width: 768px) {
-
+@media screen and (min-width: 768px) {
+.reviews-list {
+    margin-bottom: 100px;
+}
+.swiper-controll-buttons{
+    gap: 20px;
+    top: calc(100% - 47px);
+    left: calc(50% - (68px + 10px));
+}
+.swiper-button-prev,
+.swiper-button-next {
+    width: 68px;
+    height: 68px;
+}
 }
 
 @media screen and (min-width: 1280px) {
-
-} */
+.reviews-list-item {
+        width: 332px;
+}
+} 
