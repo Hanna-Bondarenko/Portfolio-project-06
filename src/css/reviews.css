@@ -18,14 +18,13 @@ color: rgba(250, 250, 250, 0.4);
 }
 
 .reviews-list-item.swiper-slide{
-    width: 344px;
+    max-width: 344px;
     padding: 32px 24px;
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 20px;
     min-height: 376px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 .reviews-list-item-img{
     margin-bottom: 32px;
@@ -126,6 +125,6 @@ color: rgba(250, 250, 250, 0.4);
 
 @media screen and (min-width: 1440px) {
 .reviews-list-item.swiper-slide{
-        width: 332px;
+    max-width: 332px;
 }
 } 

@@ -52,36 +52,34 @@ const initializeReviews = async () => {
   }
 };
 // Initialize Swiper
-const swiperReviews = new Swiper('.reviews-swiper.swiper', {   
-  spaceBetween: 16,   
+const swiperReviews = new Swiper('.reviews-swiper.swiper', {     
+  slidesPerView: 1, 
+  spaceBetween: 0, 
   speed: 700,
 
-  // Медіаправила
   breakpoints: {
-    0: {  // Мобільні пристрої
-      slidesPerView: 1, 
-    },
-    768: {  // Планшети
+    768: { 
       slidesPerView: 2, 
+      spaceBetween: 16, 
     },
-    1440: {  // Великі екрани (настільні)
+    1440: {  
       slidesPerView: 4,
+      spaceBetween: 16, 
     },
   },
 
-  // Налаштування навігації
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
-  // Клавіатурна навігація
+
   keyboard: {
     enabled: true,       
     onlyInViewport: true,
   },
 
-  // Навігація за допомогою миші
+
   grabCursor: true,       
   mousewheel: {
     invert: false,       
