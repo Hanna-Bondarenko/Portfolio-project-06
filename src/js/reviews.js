@@ -41,7 +41,6 @@ const initializeReviews = async () => {
     const swiper = new Swiper('.swiper', {
       slidesPerView: 4, // Set number of slides to show
       spaceBetween: 10, // Space between slides
-      loop: true,
       breakpoints: {
         320: {
           slidesPerView: 1,
@@ -60,12 +59,6 @@ const initializeReviews = async () => {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-      },
-      modules: [Keyboard],
-      keyboard: {
-        enabled: true, // Включить управление клавиатурой
-        onlyInViewport: true, // Переход только если слайдер в пределах видимости
-        pageUpDown: true, // Включить поддержку клавиш PageUp и PageDown
       },
     });
   } catch (error) {
