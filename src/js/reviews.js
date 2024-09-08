@@ -1,9 +1,7 @@
-import axios from "axios";
+import axios from 'axios';
 import Swiper from 'swiper/bundle';
 
-
-
-const reviewList = document.querySelector(".reviews-list");
+const reviewList = document.querySelector('.reviews-list');
 
 // Set axios base URL
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study';
@@ -25,8 +23,8 @@ function createReviewLi(reviewData) {
 }
 
 // Function to render review cards
-const renderCard = (reviews) => {
-  const markup = reviews.map(createReviewLi).join("");
+const renderCard = reviews => {
+  const markup = reviews.map(createReviewLi).join('');
   reviewList.insertAdjacentHTML('beforeend', markup);
 };
 
@@ -35,26 +33,26 @@ const initializeReviews = async () => {
   try {
     // Fetch data
     let data = await fetchReviews();
-    
+
     // Render reviews
     renderCard(data);
 
     // Initialize Swiper after rendering
     const swiper = new Swiper('.swiper', {
-      slidesPerView: 4,       // Set number of slides to show
-      spaceBetween: 10,       // Space between slides
-       breakpoints: {
-      
-      320: {
-        slidesPerView: 1, 
+      slidesPerView: 4, // Set number of slides to show
+      spaceBetween: 10, // Space between slides
+      loop: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1280: {
+          slidesPerView: 4,
+        },
       },
-      768: {
-        slidesPerView: 2, 
-      },
-      1280: {
-        slidesPerView: 4,
-      },
-    },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -63,9 +61,15 @@ const initializeReviews = async () => {
         el: '.swiper-pagination',
         clickable: true,
       },
+      modules: [Keyboard],
+      keyboard: {
+        enabled: true, // Включить управление клавиатурой
+        onlyInViewport: true, // Переход только если слайдер в пределах видимости
+        pageUpDown: true, // Включить поддержку клавиш PageUp и PageDown
+      },
     });
   } catch (error) {
-    console.error("Error fetching reviews:", error);
+    console.error('Error fetching reviews:', error);
   }
 };
 
@@ -76,7 +80,7 @@ function initSwiper() {
   new Swiper('.swiper', {
     loop: true,
     slidesPerView: 4,
-    spaceBetween: 16, 
+    spaceBetween: 16,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
