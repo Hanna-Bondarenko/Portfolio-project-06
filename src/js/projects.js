@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 
-const swiperProjects = new Swiper('.swiper', {
+const swiperProjects = new Swiper('.projects-swiper-container', {
   // Optional parameters
   direction: 'horizontal',
   autoHeight: true,
