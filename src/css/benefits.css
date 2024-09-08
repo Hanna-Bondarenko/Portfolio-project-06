@@ -23,7 +23,6 @@
 }
 .benefits-cards {
   border-radius: 20px;
-  padding: 24px;
   width: 344px;
   height: 270px;
 }
@@ -105,12 +104,11 @@
     padding-bottom: 82px;
   }
   .benefits-section-title {
-    width: 284px;
+    width: 550px;
   }
-  .benefits-container {
+  .benefits-cards-conteiner {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 }
