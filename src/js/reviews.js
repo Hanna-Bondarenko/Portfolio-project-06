@@ -38,36 +38,7 @@ const initializeReviews = async () => {
     
     // Render reviews
     renderCard(data);
-
-    // Initialize Swiper
-    const swiperReviews = new Swiper('.swiper', {
-      slidesPerView: 1,       
-      spaceBetween: 16,   
-      
-      breakpoints: {
-        768: {
-          slidesPerView: 2, 
-        },
-        1440: {
-          slidesPerView: 4,
-        },
-      },
-
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      keyboard: {
-        enabled: true,       
-        onlyInViewport: true 
-      },
-
-      grabCursor: true,       
-      mousewheel: {
-        invert: false,       
-      },
-    });
+    
   }
   catch (error) {
     iziToast.error({
@@ -80,5 +51,41 @@ const initializeReviews = async () => {
     swiperControllButton.classList.add('is-hidden');
   }
 };
+// Initialize Swiper
+const swiperReviews = new Swiper('.reviews-swiper.swiper', {   
+  spaceBetween: 16,   
+  speed: 700,
 
-initializeReviews();
+  // Медіаправила
+  breakpoints: {
+    0: {  // Мобільні пристрої
+      slidesPerView: 1, 
+    },
+    768: {  // Планшети
+      slidesPerView: 2, 
+    },
+    1440: {  // Великі екрани (настільні)
+      slidesPerView: 4,
+    },
+  },
+
+  // Налаштування навігації
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // Клавіатурна навігація
+  keyboard: {
+    enabled: true,       
+    onlyInViewport: true,
+  },
+
+  // Навігація за допомогою миші
+  grabCursor: true,       
+  mousewheel: {
+    invert: false,       
+  },
+});
+
+  initializeReviews();
