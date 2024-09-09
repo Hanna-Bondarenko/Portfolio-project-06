@@ -12,9 +12,7 @@
   color: rgba(250, 250, 250, 0.4);
   margin-bottom: 32px;
 }
-.benefits-cards-conteiner {
-  margin-bottom: 32px;
-}
+
 .benefits-list {
   list-style: none;
   gap: 16px;
@@ -92,9 +90,8 @@
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .benefits-cards-conteiner {
-    margin-bottom: 64px;
+  .benefits-btn-container {
+    margin-top: 62px;
   }
 }
 
@@ -104,13 +101,14 @@
     padding-bottom: 82px;
   }
   .benefits-section-title {
-    margin-right: 373px;
+    margin-right: 435px;
   }
   .benefits-cards-conteiner {
     display: flex;
     flex-wrap: wrap;
+    justify-content: end;
   }
   .benefits-btn-container {
-    margin-left: 610px;
+    margin-inline: 518px;
   }
 }
