@@ -41,6 +41,7 @@ const initializeReviews = async () => {
     // Render reviews
     renderCard(data);
 
+
     // Initialize Swiper
     const swiperReviews = new Swiper('.swiper', {
       slidesPerView: 1,       
@@ -72,6 +73,7 @@ const initializeReviews = async () => {
       },
     });
 
+
   }
   catch (error) {
     iziToast.error({
@@ -84,6 +86,40 @@ const initializeReviews = async () => {
     swiperControllButton.classList.add('is-hidden');
   }
 };
+// Initialize Swiper
+const swiperReviews = new Swiper('.reviews-swiper.swiper', {     
+  slidesPerView: 1, 
+  spaceBetween: 0, 
+  speed: 700,
+
+  breakpoints: {
+    768: { 
+      slidesPerView: 2, 
+      spaceBetween: 16, 
+    },
+    1440: {  
+      slidesPerView: 4,
+      spaceBetween: 16, 
+    },
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+
+  keyboard: {
+    enabled: true,       
+    onlyInViewport: true,
+  },
+
+
+  grabCursor: true,       
+  mousewheel: {
+    invert: false,       
+  },
+});
 
 initializeReviews();
 
