@@ -45,7 +45,7 @@ header {
   display: none;
 }
 
-.order-button {
+.order {
   display: none;
 }
 
@@ -151,14 +151,13 @@ header {
   text-decoration-skip-ink: none;
 }
 
-.order-button-mobile {
+.order-mobile {
   margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 60px;
   padding: 14px 31px;
-  height: 45px;
   background: #ed3b44;
   font-weight: 500;
   font-size: 14px;
@@ -168,9 +167,11 @@ header {
   border: none;
   margin-top: 289px;
   margin-bottom: 64px;
+  width: 164px;
+  height: 45px;
 }
 
-.order-button-mobile:hover {
+.order-mobile:hover {
   background-color: #e0373f;
 }
 
@@ -215,7 +216,7 @@ header {
     cursor: pointer;
   }
 
-  .order-button {
+  .order {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,15 +224,16 @@ header {
     gap: 10px;
     border-radius: 60px;
     padding: 18px 24px;
-    height: 55px;
     background-color: #ed3b44;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: -0.02em;
     color: #fafafa;
+    width: 163px;
+    height: 55px;
   }
 
-  .order-button:hover {
+  .order:hover {
     background-color: #e0373f;
   }
 
