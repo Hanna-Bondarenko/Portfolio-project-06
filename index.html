@@ -21,7 +21,7 @@
     <script type="module" crossorigin src="/Portfolio-project-06/index.js"></script>
     <link rel="modulepreload" crossorigin href="/Portfolio-project-06/assets/vendor-BG4KJ3XV.js">
     <link rel="stylesheet" crossorigin href="/Portfolio-project-06/assets/vendor-DsZ3AUy1.css">
-    <link rel="stylesheet" crossorigin href="/Portfolio-project-06/assets/index-BuVYw2Bx.css">
+    <link rel="stylesheet" crossorigin href="/Portfolio-project-06/assets/index-BY8LyFFV.css">
   </head>
   <body>
     <header class="page-header">
@@ -771,36 +771,38 @@
             <img class="img-wt" srcset="/Portfolio-project-06/assets/logo-dvBYZX_W.png 1x, /Portfolio-project-06/assets/logo@2x-B3BiDurH.png 2x" src="/Portfolio-project-06/assets/logo-dvBYZX_W.png" alt="User Photo" width="44" height="44">
             <h1 class="title-wt">LET'S <span>WORK </span>TOGETHER</h1>
         </div>
-        <form action="#">
+        <form action="#" id="workForm">
             <div class="form-container-wt">
-            <div class="contact-wt">
-                <input type="email" placeholder="clients@gmail.com" required>
-                <input type="text" placeholder="comments">
+                <div class="contact-wt">
+                    <input type="email" id="email" placeholder="clients@gmail.com" required pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" title="Enter a valid email">
+                    <input type="text" id="comments" placeholder="comments" maxlength="50">
+                    <div id="emailError" class="error-message">Invalid email, try again</div>
+                </div>
+                <button class="btn-wt" type="submit">Send</button>
             </div>
-            <button class="btn-wt" type="submit">Send</button>
-        </div>
             <div class="container-link-wt">
                 <a href="mailto:lloydjefferson@gmail.com"><input class="link-email-wt" type="email" value="lloydjefferson@gmail.com" readonly></a>
                 <a href="tel:+380111111111"><input class="link-tel-wt" type="tel" value="+380 11 111 11 11" readonly></a>
-                
             </div>
         </form>
     </div>
-
 </section>
 
-
-<div class="backdrop-wt" >
+<div class="backdrop-wt hidden">
     <div class="modal-wt">
         <button type="button" class="modal-close-btn-wt">
             <svg class="modal-close-img-wt" width="22" height="22">
-                <use  href="/Portfolio-project-06/assets/icons-C7kRyYJ0.svg#icon-x"></use>
+                <use href="/Portfolio-project-06/assets/icons-C7kRyYJ0.svg#icon-x"></use>
             </svg>
         </button>
         <h3 class="modal-title-wt">Thank you for your interest in cooperation!</h3>
         <p class="modal-text-wt">The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.</p>
     </div>
 </div>
+
+
+
+
 
 
 
