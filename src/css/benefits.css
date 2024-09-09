@@ -109,7 +109,6 @@
   .benefits-cards-conteiner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
   }
   .benefits-btn-container {
     margin-left: 610px;
