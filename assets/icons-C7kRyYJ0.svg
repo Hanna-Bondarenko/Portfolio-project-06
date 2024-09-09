@@ -8,10 +8,6 @@
     <symbol id="icon-two-lines" viewBox="0 0 32 32">
       <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M2 10.556h28M2 21.444h28"></path>
     </symbol>
-
-    <symbol id="icon-arrow" viewBox="0 0 32 32">
-      <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.5556" d="M24 20l-8-8-8 8"></path>
-    </symbol>
     
     <symbol id="icon-arrow-acc" viewBox="0 0 32 32">
     <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2" d="M24 12l-8 8-8-8"></path>
