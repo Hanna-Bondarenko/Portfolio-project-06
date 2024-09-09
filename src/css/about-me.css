@@ -104,14 +104,14 @@
   display: inline-block !important;
   width: 20px !important;
   height: 20px !important;
-  background-image: url('../img/about-me/ArrowDown.svg') !important; /* Стрелка вниз */
+  background-image: url('../img/about-me/ArrowDown.svg') !important;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 100px;
   padding: 10px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-image 0.3s ease; /* Плавная анимация */
+  transition: background-image 0.3s ease;
 }
 
 /* Открытое состояние (стрелка вверх) */
@@ -127,6 +127,11 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.accordion-icon_about {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
 }
 
 .accordion-container {
@@ -190,8 +195,8 @@
 }
 
 .tech_list:hover {
-  background-color: red;
-  border-color: red;
+  background-color: #ed3b44;
+  border-color: #ed3b44;
 }
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
