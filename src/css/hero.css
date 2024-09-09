@@ -1,39 +1,33 @@
 .hero-section {
-  background: linear-gradient(
-      90deg,
-      #1c1d20 49.68%,
-      #69292d 67.73%,
-      #ed3b44 100%
-    ),
-    url(/src/img/hero/Hero.png); /* Поєднання градієнта і зображення */
+  background: url(/img/hero/Hero.png),
+    linear-gradient(90deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: 100vh;
 }
 
 @media (min-resolution: 192dpi) {
   .hero-section {
-    background: linear-gradient(
-        90deg,
-        #1c1d20 49.68%,
-        #69292d 67.73%,
-        #ed3b44 100%
-      ),
-      url(/src/img/hero/Hero@2x.png);
+    background: url(/img/hero/Hero@2x.png),
+      linear-gradient(90deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    height: 100vh;
   }
 }
 
 .hero-title {
+  display: flex;
   font-weight: 500;
   font-size: 50px;
   line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
-  margin-bottom: 212px;
+  padding-top: 281px;
+  padding-bottom: 212px;
 }
 
 .social-networks {
@@ -42,6 +36,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 4px;
+  padding-bottom: 32px;
 }
 
 .social-networks-item {
