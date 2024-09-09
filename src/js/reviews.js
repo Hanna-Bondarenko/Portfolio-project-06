@@ -5,7 +5,7 @@ import iziToast from "izitoast";
 import Swiper from 'swiper/bundle';
 
 const reviewList = document.querySelector(".reviews-list");
-const swiperControllButton = document.querySelector(".swiper-controll-buttons");
+const swiperControllButtons = document.querySelector(".swiper-controll-buttons");
 
 // Set axios base URL
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study';
@@ -40,40 +40,6 @@ const initializeReviews = async () => {
 
     // Render reviews
     renderCard(data);
-
-
-    // Initialize Swiper
-    const swiperReviews = new Swiper('.swiper', {
-      slidesPerView: 1,       
-      spaceBetween: 16,   
-      
-      breakpoints: {
-        768: {
-          slidesPerView: 2, 
-        },
-        1440: {
-          slidesPerView: 4,
-        },
-      },
-
-
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      keyboard: {
-        enabled: true,       
-        onlyInViewport: true 
-      },
-
-      grabCursor: true,       
-      mousewheel: {
-        invert: false,       
-      },
-    });
-
-
   }
   catch (error) {
     iziToast.error({
@@ -81,9 +47,8 @@ const initializeReviews = async () => {
       position: 'topCenter',
       message: `Error fetching reviews: ${error}`,
     });
-    
     reviewList.insertAdjacentHTML('beforeend', `<p class="reviews-error-text">Not found</p>`);
-    swiperControllButton.classList.add('is-hidden');
+    swiperControllButtons.classList.add('is-hidden');
   }
 };
 // Initialize Swiper
@@ -102,19 +67,14 @@ const swiperReviews = new Swiper('.reviews-swiper.swiper', {
       spaceBetween: 16, 
     },
   },
-
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next.button-next',
+    prevEl: '.swiper-button-prev.button-prev',
   },
-
-
   keyboard: {
     enabled: true,       
     onlyInViewport: true,
   },
-
-
   grabCursor: true,       
   mousewheel: {
     invert: false,       
