@@ -169,16 +169,15 @@
 
 .swiper-custom-arrows {
   position: absolute;
-  top: calc(100% - 31px);
-  left: calc(50% - (52px + 6px));
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 12px;
 }
 
 @media screen and (min-width: 768px) {
-  .swiper-controll-buttons {
+  .swiper-custom-arrows {
     gap: 20px;
-    top: calc(100% - 47px);
-    left: calc(50% - (68px + 10px));
   }
 }
