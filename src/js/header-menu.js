@@ -1,51 +1,53 @@
-// // Функція для плавного скролу до секції
-// function scrollToSection(sectionId) {
-//   document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-// }
 
-// document.querySelector('.burger-menu').addEventListener('click', function() {
-//     document.querySelector('.mob-menu').classList.add('is-open');
-// }); 
+// Плавний скрол до секцій
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
-// document.querySelector('.menu-close-btn').addEventListener('click', function() {
-//   document.querySelector('.mob-menu').classList.remove('is-open');
-// });
-
-// document.querySelectorAll('.nav-list-item-mobile a').forEach(anchor => {
-//   anchor.addEventListener('click', function() {
-//     document.querySelector('.mob-menu').classList.remove('is-open');
-//   });
-// });
-
-// function scrollToSection(sectionId) {
-//   const section = document.getElementById(sectionId);
-//   if (section) {
-//     section.scrollIntoView({ behavior: 'smooth' });
-//   }
-// }
+// Отримати елементи
+const burgerMenu = document.querySelector('.burger-menu');
+const mobMenu = document.querySelector('.mob-menu');
+const menuCloseBtn = document.querySelector('.menu-close-btn');
+const menuTitle = document.querySelector('.menu-title');
+const navList = document.querySelector('.nav-list');
 
 // Відкриття мобільного меню
-document.querySelector('.burger-menu').addEventListener('click', function() {
-    document.querySelector('.mob-menu').classList.add('is-open');
-}); 
+function openMenu() {
+  mobMenu.classList.add('is-open');
+  mobMenu.classList.remove('hidden');
+}
 
 // Закриття мобільного меню
-document.querySelector('.menu-close-btn').addEventListener('click', function() {
-  document.querySelector('.mob-menu').classList.remove('is-open');
+function closeMenu() {
+  mobMenu.classList.remove('is-open');
+  mobMenu.classList.add('hidden');
+}
+
+// Обробники подій для кнопок
+burgerMenu.addEventListener('click', openMenu);
+menuCloseBtn.addEventListener('click', closeMenu);
+
+// Закрити мобільне меню
+document.addEventListener('click', (event) => {
+  if (!mobMenu.contains(event.target) && !burgerMenu.contains(event.target)) {
+    closeMenu();
+  }
+});
+
+// Перемикає видимість меню при кліку на заголовок
+menuTitle.addEventListener('click', () => {
+  navList.classList.toggle('is-open');
 });
 
 // Обробка кліків на мобільні навігаційні посилання
-// document.querySelectorAll('.nav-list-item-mobile a').forEach(anchor => {
-//   anchor.addEventListener('click', function(event) {
-//     event.preventDefault(); // Зупинити перезавантаження сторінки
-
-//     const sectionId = this.getAttribute('href').substring(1); // Отримати ID секції з href (виключити #)
-//     scrollToSection(sectionId); // Плавний скрол
-
-//     document.querySelector('.mob-menu').classList.remove('is-open'); // Закрити меню
-//   });
-// });
-
-// document.querySelector('.menu-title').addEventListener('click', function() {
-//   document.querySelector('.nav-menu').classList.toggle('show');
-// });
+document.querySelectorAll('.nav-list-item-mobile a').forEach(anchor => {
+  anchor.addEventListener('click', function(event) {
+    event.preventDefault(); // Зупинити перезавантаження сторінки
+    const sectionId = this.getAttribute('href').substring(1); // Отримати ID секції з href (виключити #)
+    scrollToSection(sectionId); // Плавний скрол
+    closeMenu(); // Закрити меню
+  });
+});
