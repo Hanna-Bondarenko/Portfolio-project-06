@@ -104,10 +104,9 @@
     padding-bottom: 82px;
   }
   .benefits-section-title {
-    width: 550px;
+    width: 284px;
   }
   .benefits-cards-conteiner {
-    display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
   }
