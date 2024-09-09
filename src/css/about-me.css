@@ -134,7 +134,7 @@
 }
 
 /* swiper */
-.mySwiper {
+.mySwiperAbout {
   display: flex !important;
   padding-left: 32px !important;
   align-items: center;
@@ -181,7 +181,7 @@
 
 .icon_swiper {
 }
-.swiper-wrapper {
+.about_swiper_wrapper {
   overflow: hidden;
   max-width: 1200px !important;
 }
@@ -195,10 +195,10 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
-  .mySwiper {
+  .mySwiperAbout {
     padding: 0 !important;
   }
-  .swiper-wrapper {
+  .about_swiper_wrapper {
     width: 220px !important;
   }
   .tech_list {
@@ -229,12 +229,12 @@
     width: 130px !important;
     height: 130px !important;
   }
-  .mySwiper {
+  .mySwiperAbout {
     padding: 0 !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
   }
-  .swiper-wrapper {
+  .about_swiper_wrapper {
     max-width: 260px !important;
   }
   .container {
@@ -254,7 +254,7 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-  .swiper-wrapper {
+  .about_swiper_wrapper {
     width: 600px !important;
   }
   .container {
