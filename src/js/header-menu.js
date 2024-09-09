@@ -42,12 +42,4 @@ menuTitle.addEventListener('click', () => {
   navList.classList.toggle('is-open');
 });
 
-// Обробка кліків на мобільні навігаційні посилання
-document.querySelectorAll('.nav-list-item-mobile a').forEach(anchor => {
-  anchor.addEventListener('click', function(event) {
-    event.preventDefault(); // Зупинити перезавантаження сторінки
-    const sectionId = this.getAttribute('href').substring(1); // Отримати ID секції з href (виключити #)
-    scrollToSection(sectionId); // Плавний скрол
-    closeMenu(); // Закрити меню
-  });
-});
+
