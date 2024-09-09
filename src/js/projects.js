@@ -10,8 +10,8 @@ const swiperProjects = new Swiper('.projects-swiper-container', {
   allowTouchMove: true,
   simulateTouch: true,
   navigation: {
-    nextEl: '.custom-next',
-    prevEl: '.custom-prev',
+    nextEl: '.custom-projects-prev',
+    prevEl: '.custom-projects-next',
     disabledClass: 'swiper-button-disabled',
   },
   // effect: 'creative',
