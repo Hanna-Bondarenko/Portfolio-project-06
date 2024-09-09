@@ -13,7 +13,7 @@ const acc = new Accordion('.accordion-container', {
 
 acc.open(0);
 
-var swiper = new Swiper('.mySwiper', {
+var swiper = new Swiper('.mySwiperAbout', {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
@@ -21,10 +21,7 @@ var swiper = new Swiper('.mySwiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+
   breakpoints: {
     320: {
       slidesPerView: 2,
