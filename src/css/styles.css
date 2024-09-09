@@ -9,7 +9,7 @@
 @import url('./common.css');
 
 /* Sections style */
-@import url('./header.css');
+@import url('./header-menu.css');
 @import url('./hero.css');
 @import url('./about-me.css');
 @import url('./benefits.css');
