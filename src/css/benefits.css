@@ -1,0 +1,114 @@
+/* ============ BENEFITS ============ */
+.benefits-section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.benefits-section-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
+.benefits-cards-conteiner {
+  margin-bottom: 32px;
+}
+.benefits-list {
+  list-style: none;
+  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.benefits-cards {
+  border-radius: 20px;
+  width: 344px;
+  height: 270px;
+}
+
+.benefits-item {
+  border-radius: 20px;
+  padding: 24px;
+  width: 344px;
+  height: 270px;
+  background: #242527;
+}
+
+.benefits-icons-frame {
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  background-color: #ed3b44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits-item-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  margin-top: 64px;
+}
+.benefits-item-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+  margin-top: 8px;
+}
+.benefits-btn {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  width: 187px;
+  height: 55px;
+  background: transparent;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .benefits-list {
+    max-width: 704px;
+    list-style: none;
+    gap: 16px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-cards-conteiner {
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .benefits-section {
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+  .benefits-section-title {
+    width: 550px;
+  }
+  .benefits-cards-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
