@@ -38,5 +38,4 @@ var swiper = new Swiper('.mySwiperAbout', {
 const nextButton = document.getElementById('custom-next-btn');
 nextButton.addEventListener('click', () => {
   swiper.slidePrev(); // Переход на следующий слайд
-  svgIcon.style.setProperty('--color1', '#3b3b3b');
 });
