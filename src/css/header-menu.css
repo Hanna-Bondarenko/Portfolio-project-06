@@ -51,17 +51,22 @@ header {
 
 .burger-menu {
   cursor: pointer;
-  position: absolute;
-  top: 32px;
-  right: 16px;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+.mob-menu.hidden {
+  display: none;
 }
 
 .mob-menu {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 1000;
@@ -80,11 +85,12 @@ header {
 
 @media (min-resolution: 192dpi) {
   .mob-menu {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     z-index: 1000;
@@ -178,7 +184,7 @@ header {
     gap: 151px;
   }
 
-  .nav-list {
+  .nav-list.is-open {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -188,18 +194,6 @@ header {
     font-size: 16px;
     letter-spacing: -0.02em;
     color: #fafafa;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-  }
-
-  .nav-list-item {
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-  }
-
-  .nav-list-item:hover {
-    color: #ed3b44;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
   }
 
   .nav-menu {
@@ -218,6 +212,7 @@ header {
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #fafafa;
+    cursor: pointer;
   }
 
   .order-button {
