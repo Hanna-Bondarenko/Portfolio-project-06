@@ -27,7 +27,7 @@
   text-transform: uppercase;
   color: #fafafa;
   padding-top: 281px;
-  padding-bottom: 212px;
+  padding-bottom: 120px;
 }
 
 .social-networks {
@@ -76,8 +76,8 @@
 
 @media screen and (min-width: 768px) {
   .hero-title {
-    font-size: 90px;
-    margin-bottom: 187px;
+    font-size: 50px;
+    padding-bottom: 180px;
   }
 
   .social-networks {
@@ -112,6 +112,8 @@
 
 @media screen and (min-width: 1440px) {
   .hero-title {
-    margin-bottom: 243px;
+    padding-top: 130px;
+    padding-bottom: 240px;
+    font-size: 90px;
   }
 }
