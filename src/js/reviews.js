@@ -1,3 +1,5 @@
+
+
 import axios from "axios";
 import iziToast from "izitoast";
 import Swiper from 'swiper/bundle';
@@ -25,8 +27,8 @@ function createReviewLi(reviewData) {
 }
 
 // Function to render review cards
-const renderCard = (reviews) => {
-  const markup = reviews.map(createReviewLi).join("");
+const renderCard = reviews => {
+  const markup = reviews.map(createReviewLi).join('');
   reviewList.insertAdjacentHTML('beforeend', markup);
 };
 
@@ -35,7 +37,7 @@ const initializeReviews = async () => {
   try {
     // Fetch data
     let data = await fetchReviews();
-    
+
     // Render reviews
     renderCard(data);
 
@@ -53,6 +55,7 @@ const initializeReviews = async () => {
         },
       },
 
+
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -68,6 +71,7 @@ const initializeReviews = async () => {
         invert: false,       
       },
     });
+
   }
   catch (error) {
     iziToast.error({
@@ -82,3 +86,4 @@ const initializeReviews = async () => {
 };
 
 initializeReviews();
+

@@ -1,3 +1,4 @@
+@import 'swiper/swiper-bundle.css';
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -81,7 +82,6 @@
   border-bottom: 1px solid #ccc !important;
 }
 .ac:last-child {
-  border-bottom: none !important;
 }
 .ac-text {
   color: white !important;
@@ -90,7 +90,7 @@
 .ac-trigger {
   color: white !important;
 }
-.ac:not(:last-child) {
+.ac {
   padding-bottom: 32px;
 }
 
@@ -129,14 +129,83 @@
   background-position: center;
 }
 
-.swiper {
-  margin-top: 24px;
+.accordion-container {
+  margin-bottom: 96px;
 }
-.swiper-slide {
-  border-radius: 100%;
+
+/* swiper */
+.mySwiper {
+  display: flex !important;
+  padding-left: 32px !important;
+  align-items: center;
+  justify-content: space-between;
+}
+.swiper {
+  margin-bottom: 164px;
+}
+
+.tech_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px !important;
+  height: 200px !important;
+  background-color: transparent;
+  border-radius: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: white;
+  border: 2px solid #3b3b3b;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: white;
+  margin: 0 !important;
+}
+.icon_swiper {
+  border: none !important;
+  padding: 0 !important;
+  width: 40px !important;
+  height: 40px !important;
+
+  background-color: transparent;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+#custom-next-btn svg {
+  --color1: #3b3b3b; /* Изменяет цвет стрелки */
+}
+
+.icon_swiper {
+}
+.swiper-wrapper {
+  overflow: hidden;
+  max-width: 1200px !important;
+}
+.swiper-list-item {
+  margin: 0 !important;
+}
+
+.tech_list:hover {
+  background-color: red;
+  border-color: red;
 }
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
+  .mySwiper {
+    padding: 0 !important;
+  }
+  .swiper-wrapper {
+    width: 220px !important;
+  }
+  .tech_list {
+    width: 110px !important;
+    height: 110px !important;
+    font-size: 16px;
+  }
   .container {
     max-width: 340px;
   }
@@ -155,6 +224,19 @@
 }
 
 @media screen and (min-width: 375px) and (max-width: 767px) {
+  .tech_list {
+    font-family: 16px;
+    width: 130px !important;
+    height: 130px !important;
+  }
+  .mySwiper {
+    padding: 0 !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  .swiper-wrapper {
+    max-width: 260px !important;
+  }
   .container {
     max-width: 375px;
   }
@@ -172,6 +254,9 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
+  .swiper-wrapper {
+    width: 600px !important;
+  }
   .container {
     max-width: 768px;
   }
