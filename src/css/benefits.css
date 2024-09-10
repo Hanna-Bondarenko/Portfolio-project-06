@@ -1,5 +1,5 @@
 /* ============ BENEFITS ============ */
-.benefits-section {
+.benefits {
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -21,7 +21,6 @@
 }
 .benefits-cards {
   border-radius: 20px;
-  width: 344px;
   height: 270px;
 }
 
@@ -80,7 +79,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .benefits-section {
+  .benefits {
     padding-top: 48px;
     padding-bottom: 48px;
   }
@@ -93,13 +92,13 @@
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
   }
-  .benefits-btn-container {
-    margin-top: 62px;
+  .benefits-btn {
+    margin-top: 64px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .benefits-section {
+  .benefits {
     padding-top: 82px;
     padding-bottom: 82px;
   }
