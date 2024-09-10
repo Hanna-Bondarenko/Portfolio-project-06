@@ -1,10 +1,15 @@
 .hero-section {
+  position: relative;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 32px;
   background: url(/img/hero/Hero.png),
     linear-gradient(90deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 40%;
   background-size: cover;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 @media (min-resolution: 192dpi) {
@@ -12,14 +17,13 @@
     background: url(/img/hero/Hero@2x.png),
       linear-gradient(90deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 40%;
     background-size: cover;
     height: 100vh;
   }
 }
 
 .hero-title {
-  display: flex;
   font-weight: 500;
   font-size: 50px;
   line-height: 1;
@@ -27,7 +31,7 @@
   text-transform: uppercase;
   color: #fafafa;
   padding-top: 281px;
-  padding-bottom: 120px;
+  padding-bottom: 212px;
 }
 
 .social-networks {
@@ -35,11 +39,11 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 4px;
-  padding-bottom: 32px;
+  gap: 3px;
 }
 
 .social-networks-item {
+  height: 37px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,46 +78,56 @@
   padding: 10px 12px;
 }
 
-@media screen and (min-width: 768px) {
-  .hero-title {
-    font-size: 50px;
-    padding-bottom: 180px;
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .social-networks {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: flex-end;
   }
+}
 
+@media screen and (min-width: 768px) {
+  .hero-section {
+    max-width: 768px;
+  }
+  .hero-title {
+    font-size: 90px;
+    padding-top: 300px;
+    padding-bottom: 187px;
+  }
   .social-networks {
     justify-content: flex-end;
     gap: 8px;
   }
-
   .social-networks-item {
+    height: 55px;
     font-size: 16px;
   }
-
   .instagram {
     padding: 18px 20px;
   }
-
   .facebook {
     padding: 18px 17px;
   }
-
   .youtube {
     padding: 18px;
   }
-
   .github {
     padding: 18px 16px;
   }
-
   .email {
     padding: 18px 24px;
   }
 }
 
 @media screen and (min-width: 1440px) {
+  .hero-section {
+    max-width: 1440px;
+  }
   .hero-title {
-    padding-top: 130px;
-    padding-bottom: 240px;
-    font-size: 90px;
+    padding-top: 300px;
+    padding-bottom: 243px;
+    padding-left: 146px;
+    padding-right: 146px;
   }
 }
