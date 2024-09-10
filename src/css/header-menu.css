@@ -46,9 +46,8 @@ header {
 .burger-menu {
   cursor: pointer;
   position: absolute;
-  position: right top 221px;
   top: 0px;
-  right: calc(50% - 135px);
+  right: 16px;
 }
 
 .mob-menu.hidden {
