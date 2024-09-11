@@ -6,7 +6,7 @@ header {
   position: absolute;
   width: 100%;
   top: 32px;
-  left: 16px;
+  left: 0;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
@@ -15,11 +15,11 @@ header {
 }
 
 .header-container {
+  width: 100%;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-direction: row;
-  gap: 143px;
 }
 
 .logo-container {
@@ -37,23 +37,17 @@ header {
   color: #fafafa;
 }
 
-.menu-title {
-  display: none;
-}
-
-.nav-list {
-  display: none;
-}
-
-.order-button {
+.menu-title,
+.nav-list,
+.order {
   display: none;
 }
 
 .burger-menu {
   cursor: pointer;
-  position: relative;
-  top: 0;
-  right: 0;
+  position: absolute;
+  top: 0px;
+  right: 16px;
 }
 
 .mob-menu.hidden {
@@ -151,14 +145,13 @@ header {
   text-decoration-skip-ink: none;
 }
 
-.order-button-mobile {
+.order-mobile {
   margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 60px;
   padding: 14px 31px;
-  height: 45px;
   background: #ed3b44;
   font-weight: 500;
   font-size: 14px;
@@ -168,23 +161,29 @@ header {
   border: none;
   margin-top: 289px;
   margin-bottom: 64px;
+  width: 164px;
+  height: 45px;
 }
 
-.order-button-mobile:hover {
+.order-mobile:hover {
   background-color: #e0373f;
 }
 
 @media screen and (min-width: 768px) {
-  header {
+  /* header {
     top: 32px;
     left: 32px;
-  }
+  } */
 
   .header-container {
-    gap: 151px;
+    gap: 166px;
   }
 
   .nav-list.is-open {
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-45%);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -197,6 +196,7 @@ header {
   }
 
   .nav-menu {
+    /* position: relative; */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -215,7 +215,7 @@ header {
     cursor: pointer;
   }
 
-  .order-button {
+  .order {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,15 +223,16 @@ header {
     gap: 10px;
     border-radius: 60px;
     padding: 18px 24px;
-    height: 55px;
     background-color: #ed3b44;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: -0.02em;
     color: #fafafa;
+    width: 163px;
+    height: 55px;
   }
 
-  .order-button:hover {
+  .order:hover {
     background-color: #e0373f;
   }
 
@@ -242,6 +243,6 @@ header {
 
 @media screen and (min-width: 1440px) {
   .header-container {
-    gap: 487px;
+    gap: 502px;
   }
 }

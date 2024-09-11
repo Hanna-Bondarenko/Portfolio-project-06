@@ -104,14 +104,14 @@
   display: inline-block !important;
   width: 20px !important;
   height: 20px !important;
-  background-image: url('../img/about-me/ArrowDown.svg') !important; /* Стрелка вниз */
+  background-image: url('../img/about-me/ArrowDown.svg') !important;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 100px;
-  padding: 10px;
+  border-radius: 100px !important;
+  padding: 16px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-image 0.3s ease; /* Плавная анимация */
+  transition: background-image 0.3s ease;
 }
 
 /* Открытое состояние (стрелка вверх) */
@@ -123,10 +123,15 @@
   background-image: url('../img/about-me/ArrowUp.svg') !important; /* Стрелка вверх */
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 100px;
-  padding: 10px;
+  padding: 16px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.accordion-icon_about {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
 }
 
 .accordion-container {
@@ -179,7 +184,8 @@
   --color1: #3b3b3b; /* Изменяет цвет стрелки */
 }
 
-.icon_swiper {
+.acc_padding {
+  padding-top: 96px;
 }
 .about_swiper_wrapper {
   overflow: hidden;
@@ -189,12 +195,15 @@
   margin: 0 !important;
 }
 
-.tech_list:hover {
-  background-color: red;
-  border-color: red;
+.about_active {
+  background-color: #ed3b44;
+  border-color: #ed3b44;
 }
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
+  .acc_padding {
+    padding-top: 32px;
+  }
   .mySwiperAbout {
     padding: 0 !important;
   }
@@ -213,6 +222,7 @@
     max-width: 100%;
     height: 500px;
   }
+
   .about_container {
     display: flex;
     flex-direction: column;
@@ -254,6 +264,12 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
+  .acc_padding {
+    padding-top: 64px;
+  }
+  .about_img {
+    margin-bottom: 0px;
+  }
   .about_swiper_wrapper {
     width: 600px !important;
   }
@@ -267,8 +283,7 @@
     width: 704px;
   }
   .about_img {
-    height: 704px;
-    margin-bottom: 64px;
+    height: 100%;
   }
   .about_img img {
     max-width: 704px;

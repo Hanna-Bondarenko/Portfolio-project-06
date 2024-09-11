@@ -1,12 +1,30 @@
 
+body.no-scroll {
+    overflow: hidden;
+}
 
-.work-together {
+.hidden {
+    display: none;
+}
+input[type="text"] {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
+input.error {
+    border-bottom: 1px solid #E74A3B;
+}
+
+.error-message {
+    color:#E74A3B;
+    font-size: 0.875em;
+    margin-top: 5px;
+    display: none;
 }
 
 
-.container-wt {
-}
+
 
 .title-container-wt {
     display: flex;
@@ -70,7 +88,12 @@ border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 .contact-wt input:hover{
 color: #fafafa;
 
+
 }
+.contact-wt input:focus{
+    border-bottom: 1px solid #fafafa;
+    color: #fafafa;
+    }
 
 .btn-wt {
     width: 100px;
@@ -122,23 +145,26 @@ border: 1px solid #fafafa;
 
 
 
-
 .backdrop-wt {
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
+    left: 0;
     background: rgba(15, 15, 16, 0.6);
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 .is-open {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
 }
-
 
 .modal-wt {
     border: 1px solid rgba(250, 250, 250, 0.1);
@@ -256,6 +282,16 @@ font-size: 16px;
     .link-tel-wt {
         width: 171px;
     }
+    .modal-wt {
+        padding: 64px;
+        width: 492px;
+        height: 246px;
+        
+        }
+        
+        .modal-title-wt{
+            width: 364px;
+        }
 
 }
 
@@ -264,16 +300,7 @@ font-size: 16px;
 
 
 
-.modal-wt {
-padding: 64px;
-width: 492px;
-height: 246px;
 
-}
-
-.modal-title-wt{
-    width: 364px;
-}
 
 
 

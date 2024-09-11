@@ -10,20 +10,9 @@ const swiperProjects = new Swiper('.projects-swiper-container', {
   allowTouchMove: true,
   simulateTouch: true,
   navigation: {
-    nextEl: '.custom-projects-prev',
-    prevEl: '.custom-projects-next',
+    nextEl: '.custom-projects-next',
+    prevEl: '.custom-projects-prev',
     disabledClass: 'swiper-button-disabled',
   },
-  // effect: 'creative',
-  // creativeEffect: {
-  //   prev: {
-  //     // will set `translateZ(-400px)` on previous slides
-  //     translate: [0, 0, -400],
-  //   },
-  //   next: {
-  //     // will set `translateX(100%)` on next slides
-  //     translate: ['100%', 0, 0],
-  //   },
-  // },
   grabCursor: true,
 });

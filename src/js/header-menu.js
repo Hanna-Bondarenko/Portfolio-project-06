@@ -1,4 +1,3 @@
-
 // Плавний скрол до секцій
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
@@ -13,6 +12,7 @@ const mobMenu = document.querySelector('.mob-menu');
 const menuCloseBtn = document.querySelector('.menu-close-btn');
 const menuTitle = document.querySelector('.menu-title');
 const navList = document.querySelector('.nav-list');
+const navMobLinks = mobMenu.querySelectorAll('a');
 
 // Відкриття мобільного меню
 function openMenu() {
@@ -30,24 +30,14 @@ function closeMenu() {
 burgerMenu.addEventListener('click', openMenu);
 menuCloseBtn.addEventListener('click', closeMenu);
 
-// Закрити мобільне меню
-document.addEventListener('click', (event) => {
-  if (!mobMenu.contains(event.target) && !burgerMenu.contains(event.target)) {
+// Закрити мобільне меню, перенаправлення на секцію
+navMobLinks.forEach(link => {
+  link.addEventListener('click', function () {
     closeMenu();
-  }
+  });
 });
 
 // Перемикає видимість меню при кліку на заголовок
 menuTitle.addEventListener('click', () => {
   navList.classList.toggle('is-open');
-});
-
-// Обробка кліків на мобільні навігаційні посилання
-document.querySelectorAll('.nav-list-item-mobile a').forEach(anchor => {
-  anchor.addEventListener('click', function(event) {
-    event.preventDefault(); // Зупинити перезавантаження сторінки
-    const sectionId = this.getAttribute('href').substring(1); // Отримати ID секції з href (виключити #)
-    scrollToSection(sectionId); // Плавний скрол
-    closeMenu(); // Закрити меню
-  });
 });
