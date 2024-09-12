@@ -34,6 +34,11 @@
   background: #242527;
 }
 
+.benefits-item:hover {
+  box-shadow: 0 0 10px #fafafa, 0 0 20px rgba(255, 255, 255, 0.5);
+  background-color: #080809;
+}
+
 .benefits-icons-frame {
   border-radius: 10px;
   width: 48px;
@@ -77,7 +82,8 @@
   margin-top: 32px;
 }
 .benefits-btn:hover {
-  border: 1px solid #fafafa;
+  box-shadow: 0 0 10px #fafafa, 0 0 20px rgba(255, 255, 255, 0.5);
+  background-color: #080809;
 }
 
 @media screen and (min-width: 768px) {
