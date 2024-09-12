@@ -111,6 +111,7 @@
   font-size: 16px;
   letter-spacing: -0.02em;
   color: #fafafa;
+  transition: box-shadow 0.8s ease-in-out, background 0.8s ease-in-out;
 }
 .projects-link:hover {
   box-shadow: 0 0 10px black, 0 0 20px rgba(224, 55, 63, 0.5);
