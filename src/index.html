@@ -19,6 +19,10 @@
     />
     <title>Portfolio Lloyd Jefferson</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
   </head>
   <body>
     <load src="./partials/header-menu.html" />
@@ -37,5 +41,13 @@
 
     <script type="module" src="main.js"></script>
     <script type="module" src="/js/header-menu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500, // тривалість анімації в мілісекундах
+        once: false,
+        mirror: true, // анімація відбувається один раз (при першому скролі)
+      });
+    </script>
   </body>
 </html>
