@@ -13,6 +13,11 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.4);
+  transition: color 0.8s ease-in-out;
+}
+
+.reviews-section:hover .reviews-section-title {
+  color: #fafafa;
 }
 
 .reviews-list {
