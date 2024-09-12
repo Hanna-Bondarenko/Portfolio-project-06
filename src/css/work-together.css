@@ -1,363 +1,365 @@
 /* =================== TITLE =========== */
 .title-container-wt {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .title-firstPart-title-wt {
-    display: flex;
+  display: flex;
 }
 
 .img-wt {
-    width: 44px;
-    height: 44px;
+  width: 44px;
+  height: 44px;
 }
 .title-wt {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 100%;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    color: #fafafa;
-    margin-left: 8px;
-    flex: 1;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+  margin-left: 8px;
+  flex: 1;
 }
 .title-wt-work {
-    color: #ED3B44;
+  color: #ed3b44;
 }
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /* ======================= FORM =============== */
 .form-container-wt {
-    display: flex;
-    flex-direction: column;
-    margin-top: 63px;
-    gap: 32px;
-    margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 63px;
+  gap: 32px;
+  margin-bottom: 64px;
 }
 
 .contact-wt {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .email-test-message {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .wt-email-input {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-    line-height: 150%;
-    letter-spacing: -0.02em;
-    color: rgba(250, 250, 250, 0.6);
-    max-width: 343px;
-    height: 44px;
-    padding-bottom: 20px;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+  max-width: 343px;
+  height: 44px;
+  padding-bottom: 20px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .wt-comment-input {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-    line-height: 150%;
-    letter-spacing: -0.02em;
-    color: rgba(250, 250, 250, 0.6);
-    max-width: 343px;
-    height: 44px;
-    padding-bottom: 20px;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+  max-width: 343px;
+  height: 44px;
+  padding-bottom: 20px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .wt-email-input:hover,
 .wt-comment-input:hover {
-    color: #fafafa;
-    border-color: #fafafa;
+  color: #fafafa;
+  border-color: #fafafa;
 }
 
 .wt-success-message {
-    display: none;
-    color: #3cbc81;
+  display: none;
+  color: #3cbc81;
 }
 
 .wt-error-message {
-    display: none;
-    color: #e74a3b;
+  display: none;
+  color: #e74a3b;
 }
 
 .wt-email-input.success {
-    border-bottom: 1px solid #3cbc81;
+  border-bottom: 1px solid #3cbc81;
 }
 
 .wt-email-input.error {
-    border-bottom: 1px solid #e74a3b;
+  border-bottom: 1px solid #e74a3b;
 }
 
 .btn-wt {
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    letter-spacing: -0.02em;
-    background-color: #ED3B44;
-    border: none;
-    color: #fafafa;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  letter-spacing: -0.02em;
+  background-color: #ed3b44;
+  border: none;
+  color: #fafafa;
+  transition: box-shadow 0.8s ease-in-out, background 0.8s ease-in-out;
 }
 
 .btn-wt:hover {
-    background-color: #e0373f;
+  box-shadow: 0 0 10px #fafafa, 0 0 20px rgba(255, 255, 255, 0.5);
+  background-color: #2d2e30;
 }
 
 /* =============== CONTACT LINK =============== */
 .container-link-wt {
-    display: flex;
-    gap: 4px;
+  display: flex;
+  gap: 4px;
 }
 
 .link-email-wt {
-    border: 1px solid rgba(250, 250, 250, 0.2);
-    border-radius: 60px;
-    padding: 10px 12px;
-    max-width: 178px;
-    text-align: center;
-    font-family: "Inter Tight", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: -0.02em;
-    color: #fafafa;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 10px 12px;
+  max-width: 178px;
+  text-align: center;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  transition: box-shadow 0.8s ease-in-out, background 0.8s ease-in-out;
 }
 
 .link-tel-wt {
-    border: 1px solid rgba(250, 250, 250, 0.2);
-    border-radius: 60px;
-    padding: 10px 12px;
-    max-width: 118px;
-    text-align: center;
-    font-family: "Inter Tight", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: -0.02em;
-    color: #fafafa;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 10px 12px;
+  max-width: 118px;
+  text-align: center;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  transition: box-shadow 0.8s ease-in-out, background 0.8s ease-in-out;
 }
 
 .link-email-wt:hover,
 .link-tel-wt:hover {
-    border: 1px solid #fafafa;
+  box-shadow: 0 0 10px #fafafa, 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 /* ================= BACKDROP-MODAL ============= */
 .backdrop-wt {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999999;
-    width: 100%;
-    height: 100%;
-    background: rgba(15, 15, 16, 0.6);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 16, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }
 
 .no-scroll {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .modal-wt {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 310px;
-    min-height: 276px;
-    padding: 64px 32px;
-    margin: 0;
-    border: 1px solid rgba(250, 250, 250, 0.1);
-    border-radius: 20px;
-    background-color: #1c1d20;
-    transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1),
-        transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translate(-50%, -50%);
-    opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 310px;
+  min-height: 276px;
+  padding: 64px 32px;
+  margin: 0;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 20px;
+  background-color: #1c1d20;
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
 .modal-wt.is-visible {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .modal-close-btn-wt {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 22px;
-    height: 22px;
-    padding: 0;
-    background-color: transparent;
-    border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
 }
 
 .modal-title-wt {
-    font-family: “Inter Tight”, sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 150%;
-    letter-spacing: -0.02em;
-    text-align: center;
-    color: #FAFAFA;
-    margin-bottom: 16px;
+  font-family: “Inter Tight”, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #fafafa;
+  margin-bottom: 16px;
 }
 
 .modal-text-wt {
-    font-family: “Inter Tight”, sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: -0.02em;
-    text-align: center;
-    color: rgba(250, 250, 250, 0.6);
+  font-family: “Inter Tight”, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(250, 250, 250, 0.6);
 }
 
 @media screen and (min-width: 375px) {
-    .modal-wt {
-        width: 343px;
-    }
+  .modal-wt {
+    width: 343px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .work-together {
-        margin-top: 132px;
-        padding-bottom: 89px;
-    }
+  .work-together {
+    margin-top: 132px;
+    padding-bottom: 89px;
+  }
 
-    .container-wt {
-        padding-bottom: 80px;
-    }
+  .container-wt {
+    padding-bottom: 80px;
+  }
 
-    .title-wt {
-        font-size: 64px;
-    }
+  .title-wt {
+    font-size: 64px;
+  }
 
-    .img-wt {
-        width: 70px;
-        height: 70px;
-    }
+  .img-wt {
+    width: 70px;
+    height: 70px;
+  }
 
-    .form-container-wt {
-        flex-direction: row;
-        margin-bottom: 18px;
-        align-items: center;
-        justify-content: space-between;
-    }
+  .form-container-wt {
+    flex-direction: row;
+    margin-bottom: 18px;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    .contact-wt {
-        flex-direction: row;
-    }
+  .contact-wt {
+    flex-direction: row;
+  }
 
-    .email-test-message {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
+  .email-test-message {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 
-    .wt-email-input {
-        min-width: 245px;
-    }
+  .wt-email-input {
+    min-width: 245px;
+  }
 
-    .wt-comment-input {
-        min-width: 245px;
-    }
+  .wt-comment-input {
+    min-width: 245px;
+  }
 
-    .btn-wt {
-        width: 150px;
-        height: 150px;
-    }
+  .btn-wt {
+    width: 150px;
+    height: 150px;
+  }
 
-    .container-link-wt {
-        gap: 8px;
-    }
+  .container-link-wt {
+    gap: 8px;
+  }
 
-    .link-email-wt {
-        min-width: 239px;
-        height: 55px;
-        font-size: 16px;
-        padding: 18px 32px;
-    }
+  .link-email-wt {
+    min-width: 239px;
+    height: 55px;
+    font-size: 16px;
+    padding: 18px 32px;
+  }
 
-    .link-tel-wt {
-        min-width: 171px;
-        height: 55px;
-        font-size: 16px;
-        padding: 18px 32px;
-    }
+  .link-tel-wt {
+    min-width: 171px;
+    height: 55px;
+    font-size: 16px;
+    padding: 18px 32px;
+  }
 
-    .modal-wt {
-        width: 492px;
-        min-height: 246px;
-        padding: 64px 64px;
-    }
+  .modal-wt {
+    width: 492px;
+    min-height: 246px;
+    padding: 64px 64px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .work-together {
-        margin-top: 130px;
-        padding-bottom: 89px;
-    }
+  .work-together {
+    margin-top: 130px;
+    padding-bottom: 89px;
+  }
 
-    .container-wt {
-        padding-bottom: 80px;
-        padding-left: 196px;
-        padding-right: 196px;
-    }
+  .container-wt {
+    padding-bottom: 80px;
+    padding-left: 196px;
+    padding-right: 196px;
+  }
 
-    .form-container-wt {
-        flex-direction: row;
-        margin-bottom: 18px;
-        align-items: center;
-        justify-content: space-between;
-    }
+  .form-container-wt {
+    flex-direction: row;
+    margin-bottom: 18px;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    .contact-wt {
-        flex-direction: row;
-    }
+  .contact-wt {
+    flex-direction: row;
+  }
 
-    .email-test-message {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
+  .email-test-message {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 
-    .wt-email-input {
-        min-width: 390px;
-    }
+  .wt-email-input {
+    min-width: 390px;
+  }
 
-    .wt-comment-input {
-        min-width: 390px;
-    }
+  .wt-comment-input {
+    min-width: 390px;
+  }
 }
