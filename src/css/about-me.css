@@ -178,9 +178,13 @@
   height: 40px;
 }
 #custom-next-btn svg {
-  --color1: #3b3b3b; /* Изменяет цвет стрелки */
+  --color1: #3b3b3b;
+  transition: color 0.8s ease-in-out; /* Изменяет цвет стрелки */
 }
 
+#custom-next-btn svg:hover {
+  --color1: #fafafa;
+}
 .acc_padding {
   padding-top: 96px;
 }
@@ -212,6 +216,7 @@
     height: 110px !important;
     font-size: 16px;
   }
+
   .container {
     max-width: 340px;
   }
