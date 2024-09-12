@@ -11,6 +11,7 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .about_container {
   display: flex;
   justify-content: center;
@@ -81,8 +82,7 @@
   border: none !important;
   border-bottom: 1px solid #ccc !important;
 }
-.ac:last-child {
-}
+
 .ac-text {
   color: white !important;
 }
