@@ -19,6 +19,11 @@
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: rgba(250, 250, 250, 0.4);
+  transition: color 0.8s ease-in-out;
+}
+
+.projects-section:hover .projects-section-title {
+  color: #fafafa;
 }
 
 .inner-container {
@@ -170,6 +175,11 @@
   margin: 0;
 }
 
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  box-shadow: 0 0 10px #fafafa, 0 0 20px rgba(255, 255, 255, 0.5);
+  background-color: #080809;
+}
 .swiper-custom-arrows {
   position: absolute;
   bottom: 0;
@@ -199,12 +209,14 @@
   opacity: 0;
   animation: pulse 2s infinite;
 }
+
 .scrollUp-btn {
   transform: rotate(270deg);
 }
+
 #scrollToHeader:hover {
-  border-color: #fafafa;
-  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px #fafafa, 0 0 20px rgba(255, 255, 255, 0.5);
+  background-color: #080809;
 }
 
 @keyframes pulse {
@@ -224,7 +236,7 @@
 
 @media screen and (min-width: 768px) {
   #scrollToHeader {
-    right: 35px;
+    left: 35px;
     bottom: 35px;
   }
 }
