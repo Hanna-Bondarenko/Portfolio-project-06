@@ -176,6 +176,11 @@
   margin: 0;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  transition: box-shadow 0.8s ease-in-out, background 0.8s ease-in-out;
+}
+
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   box-shadow: 0 0 10px #fafafa, 0 0 20px rgba(255, 255, 255, 0.5);
@@ -209,6 +214,7 @@
   border-radius: 50%;
   opacity: 0;
   animation: pulse 2s infinite;
+  transition: box-shadow 0.8s ease-in-out, background 0.8s ease-in-out;
 }
 
 .scrollUp-btn {

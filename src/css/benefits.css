@@ -32,6 +32,7 @@
   width: 344px;
   height: 270px;
   background: #242527;
+  transition: box-shadow 0.8s ease-in-out, background 0.8s ease-in-out;
 }
 
 .benefits-item:hover {
@@ -80,6 +81,7 @@
   display: block;
   cursor: pointer;
   margin-top: 32px;
+  transition: box-shadow 0.8s ease-in-out, background 0.8s ease-in-out;
 }
 .benefits-btn:hover {
   box-shadow: 0 0 10px #fafafa, 0 0 20px rgba(255, 255, 255, 0.5);

@@ -135,7 +135,8 @@ header {
   color: #fafafa;
 }
 
-.nav-list-item-mobile {
+.mob-menu a,
+.nav-list-item {
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
@@ -147,7 +148,6 @@ header {
 
 .nav-list-item:hover {
   color: #ed3b44;
-
   background-color: transparent;
 }
 
@@ -176,11 +176,6 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-  /* header {
-    top: 32px;
-    left: 32px;
-  } */
-
   .header-container {
     gap: 166px;
   }
@@ -202,7 +197,6 @@ header {
   }
 
   .nav-menu {
-    /* position: relative; */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -219,11 +213,11 @@ header {
     text-decoration-skip-ink: none;
     color: #fafafa;
     cursor: pointer;
+    transition: color 0.8s ease-in-out;
   }
 
   .menu-title:hover {
     color: #ed3b44;
-
     background-color: transparent;
   }
 
@@ -242,6 +236,7 @@ header {
     color: #fafafa;
     width: 163px;
     height: 55px;
+    transition: box-shadow 0.8s ease-in-out, background 0.8s ease-in-out;
   }
 
   .order:hover {
