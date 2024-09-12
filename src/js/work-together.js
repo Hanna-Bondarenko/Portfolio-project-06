@@ -1,67 +1,118 @@
-import axios from 'axios';
 import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+import axios from 'axios';
 
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('#workForm');
-    const emailInput = document.querySelector('#email');
-    const commentInput = document.querySelector('#comments');
-    const emailError = document.querySelector('#emailError');
-    const modal = document.querySelector('.backdrop-wt');
-    const closeModalButton = document.querySelector('.modal-close-btn-wt');
-    const body = document.body;
 
-    const openModal = () => {
-        modal.classList.add('is-open');
-        body.classList.add('no-scroll');
-    };
+const form = document.querySelector(".wt-form");
+const formEmail = document.querySelector(".wt-email-input");
+const formComment = document.querySelector(".wt-comment-input");
+const successMessage = document.querySelector('.wt-success-message');
+const errorMessage = document.querySelector('.wt-error-message');
+const backdrop = document.querySelector(".backdrop-wt");
+const modalWindow = document.querySelector(".modal-wt");
+const modalCloseBtn = document.querySelector(".modal-close-btn-wt");
 
-    const closeModal = () => {
-        modal.classList.remove('is-open');
-        body.classList.remove('no-scroll');
-    };
+formEmail.addEventListener('input', function () {
+  const email = formEmail.value.trim();
+  if (emailPattern.test(email)) {
+    formEmail.classList.add('success');
+    formEmail.classList.remove('error');
+    successMessage.style.display = 'block';
+    errorMessage.style.display = 'none';
+  } else {
+    formEmail.classList.add('error');
+    formEmail.classList.remove('success');
+    successMessage.style.display = 'none';
+    errorMessage.style.display = 'block';
+  }
+});
 
-    form.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        const email = emailInput.value;
-        const comment = commentInput.value;
+const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-        // Скидання помилок перед новим запитом
-        emailInput.classList.remove('input-error');
-        emailError.style.display = 'none';
+formComment.addEventListener('blur', function () {
+  const maxLength = 30;
+  if (formComment.value.length > maxLength) {
+    formComment.value = formComment.value.substring(0, maxLength) + '...';
+  }
+});
+//  =================== LocalStorage ==============
+formComment.addEventListener('input', function () {
+  localStorage.setItem('comments', formComment.value);
+});
+formEmail.addEventListener('input', function () {
+  localStorage.setItem('email', formEmail.value);
+});
 
-        try {
-            const response = await axios.post('https://portfolio-js.b.goit.study/api-docs', { email, comment });
-            if (response.status === 200) {
-                openModal();
-                form.reset();
-            }
-        } catch (error) {
-            // Перевірка на помилку email
-            if (error.response && error.response.data.message === 'Invalid email') {
-                emailInput.classList.add('input-error');
-                emailError.style.display = 'block';
-            } else {
-                iziToast.error({
-                    title: 'Error',
-                    message: `Failed to submit: ${error.response ? error.response.data.message : 'Server error'}`,
-                    position: 'topCenter',
-                });
-            }
-        }
-    });
-
-    closeModalButton.addEventListener('click', closeModal);
-    modal.addEventListener('click', (event) => {
-        if (event.target === modal) closeModal();
-    });
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') closeModal();
-    });
+document.addEventListener('DOMContentLoaded', function () {
+  const savedComments = localStorage.getItem('comments');
+  const savedEmail = localStorage.getItem('email');
+  if (savedComments) {
+    formComment.value = savedComments;
+  }
+  if (savedEmail) {
+    formEmail.value = savedEmail;
+  }
 });
 
 
+function openModal() {
+    document.body.classList.add('no-scroll');
+    backdrop.classList.add("is-open");
+    modalWindow.classList.add("is-visible");
+  modalCloseBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', function (event) {
+      if (event.target === backdrop) {
+        closeModal();
+      }
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    });
+  form.reset();
+}
 
-
-
-
-
+function closeModal() {
+    document.body.classList.remove('no-scroll');
+    backdrop.classList.remove("is-open");
+    modalWindow.classList.remove("is-visible");
+    modalCloseBtn.removeEventListener('click', closeModal);
+    document.removeEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    });
+  }
+form.addEventListener('submit', async function (event) {
+  event.preventDefault();
+  const emailValue = formEmail.value.trim();
+  const textComment = formComment.value;
+  try {
+    const response = await axios.post(
+      'https://portfolio-js.b.goit.study/api/requests/',
+      {
+        email: emailValue,
+        comment: textComment,
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+    formEmail.classList.remove('success');
+    successMessage.style.display = 'none';
+      openModal();
+    localStorage.removeItem('email');
+    localStorage.removeItem('comments');
+  } catch (error) {
+    iziToast.error({
+      position: 'topRight',
+      theme: 'dark',
+      messageColor: 'white',
+      backgroundColor: '#ef4040',
+      message: 'Error: ' + (error.response?.data?.message || 'Something went wrong'),
+    });
+  }
+});

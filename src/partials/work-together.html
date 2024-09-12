@@ -1,60 +1,63 @@
-<section class="work-together section" id="work-together" data-aos="fade-up">
-  <div class="container container-wt">
-    <div class="title-container-wt">
-      <img
-        class="img-wt"
-        srcset="/img/header/logo.png 1x, /img/header/logo@2x.png 2x"
-        src="/img/header/logo.png"
-        alt="User Photo"
-        width="44"
-        height="44"
-      />
-      <h1 class="title-wt">LET'S <span>WORK </span>TOGETHER</h1>
-    </div>
-    <form action="#" id="workForm">
-      <div class="form-container-wt">
-        <div class="contact-wt">
-          <input
-            type="email"
-            id="email"
-            placeholder="clients@gmail.com"
-            required
-            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-            title="Enter a valid email"
+<!-- ============ WORK TOGETHER ========== -->
+<footer>
+  <section class="work-together section" id="work-together">
+    <div class="container container-wt">
+      <!-- ======= TITLE ======== -->
+      <div class="title-container-wt">
+        <div class="title-firstPart-title-wt">
+          <img
+            class="img-wt"
+            srcset="/img/header/logo.png 1x, /img/header/logo@2x.png 2x"
+            src="/img/header/logo.png"
+            alt="User Photo"
+            width="44"
+            height="44"
           />
-          <input
-            type="text"
-            id="comments"
-            placeholder="comments"
-            maxlength="50"
-          />
-          <div id="emailError" class="error-message">
-            Invalid email, try again
-          </div>
+          <span class="title-wt"
+            >LET'S<span class="title-wt-work">WORK</span></span
+          >
         </div>
-        <button class="btn-wt" type="submit">Send</button>
+        <div>
+          <span class="title-wt">TOGETHER</span>
+        </div>
       </div>
+      <!-- ========== FORM =========== -->
+      <form action="#" class="wt-form" id="workForm">
+        <div class="form-container-wt">
+          <div class="contact-wt">
+            <div class="email-test-message">
+              <input
+                type="email"
+                class="wt-email-input"
+                id="email"
+                placeholder="clients@gmail.com"
+                required
+              />
+              <span class="wt-success-message">Success!</span>
+              <span class="wt-error-message">Invalid email, try again</span>
+            </div>
+            <input
+              type="text"
+              class="wt-comment-input"
+              id="comments"
+              placeholder="comments"
+            />
+          </div>
+          <button class="btn-wt" type="submit">Send</button>
+        </div>
+      </form>
+      <!-- ========= LINK ====== -->
       <div class="container-link-wt">
-        <a href="mailto:lloydjefferson@gmail.com"
-          ><input
-            class="link-email-wt"
-            type="email"
-            value="lloydjefferson@gmail.com"
-            readonly
-        /></a>
-        <a href="tel:+380111111111"
-          ><input
-            class="link-tel-wt"
-            type="tel"
-            value="+380 11 111 11 11"
-            readonly
-        /></a>
+        <a class="link-email-wt" href="mailto:lloydjefferson@gmail.com"
+          >lloydjefferson@gmail.com</a
+        >
+        <a class="link-tel-wt" href="tel:+380111111111"> +380 11 111 11 11</a>
       </div>
-    </form>
-  </div>
-</section>
-
-<div class="backdrop-wt hidden">
+    </div>
+  </section>
+</footer>
+<!-- ================ MODAL =============== -->
+<div class="backdrop-wt">
   <div class="modal-wt">
     <button type="button" class="modal-close-btn-wt">
       <svg class="modal-close-img-wt" width="22" height="22">
