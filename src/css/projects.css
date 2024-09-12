@@ -26,7 +26,9 @@
   position: relative;
 }
 @media screen and (min-width: 768px) {
-  padding-bottom: 132px;
+  .inner-container {
+    padding-bottom: 132px;
+  }
 }
 
 /* =======Styles for text-container======= */
@@ -106,6 +108,7 @@
   color: #fafafa;
 }
 .projects-link:hover {
+  box-shadow: 0 0 10px black, 0 0 20px rgba(224, 55, 63, 0.5);
   background: #e0373f;
 }
 @media screen and (min-width: 768px) {
@@ -186,7 +189,7 @@
 #scrollToHeader {
   display: none;
   position: fixed;
-  right: 20px;
+  left: 20px;
   bottom: 20px;
   z-index: 99999;
   padding: 10px;
