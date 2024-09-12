@@ -145,6 +145,12 @@ header {
   text-decoration-skip-ink: none;
 }
 
+.nav-list-item:hover {
+  color: #ed3b44;
+
+  background-color: transparent;
+}
+
 .order-mobile {
   margin-top: auto;
   display: flex;
@@ -215,6 +221,12 @@ header {
     cursor: pointer;
   }
 
+  .menu-title:hover {
+    color: #ed3b44;
+
+    background-color: transparent;
+  }
+
   .order {
     display: flex;
     align-items: center;
@@ -233,7 +245,8 @@ header {
   }
 
   .order:hover {
-    background-color: #e0373f;
+    box-shadow: 0 0 10px #fafafa, 0 0 20px rgba(255, 255, 255, 0.5);
+    background-color: #080809;
   }
 
   .burger-menu {

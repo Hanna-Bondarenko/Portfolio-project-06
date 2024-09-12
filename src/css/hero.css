@@ -57,6 +57,11 @@
   color: #fafafa;
 }
 
+.social-networks-item:hover {
+  box-shadow: 0 0 10px #fafafa, 0 0 20px rgba(255, 255, 255, 0.5);
+  background-color: #080809;
+}
+
 .social-networks-link {
   cursor: pointer;
 }
