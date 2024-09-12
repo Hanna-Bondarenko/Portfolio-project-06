@@ -7,9 +7,9 @@
   background: url(/img/hero/Hero.png),
     linear-gradient(90deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%);
   background-repeat: no-repeat;
-  background-position: 40%;
+  background-position: center center;
   background-size: cover;
-  /* height: 100vh; */
+  height: 100%;
 }
 
 @media (min-resolution: 192dpi) {
@@ -17,9 +17,9 @@
     background: url(/img/hero/Hero@2x.png),
       linear-gradient(90deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%);
     background-repeat: no-repeat;
-    background-position: 40%;
+    background-position: center center;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
   }
 }
 
@@ -51,11 +51,14 @@
   gap: 10px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
-  padding: 10px 12px;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
   color: #fafafa;
+}
+
+.social-networks-link {
+  cursor: pointer;
 }
 
 .instagram {
