@@ -18,12 +18,14 @@ const navMobLinks = mobMenu.querySelectorAll('a');
 function openMenu() {
   mobMenu.classList.add('is-open');
   mobMenu.classList.remove('hidden');
+  document.body.classList.add('modal-open');
 }
 
 // Закриття мобільного меню
 function closeMenu() {
   mobMenu.classList.remove('is-open');
   mobMenu.classList.add('hidden');
+  document.body.classList.remove('modal-open');
 }
 
 // Обробники подій для кнопок
