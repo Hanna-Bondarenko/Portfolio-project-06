@@ -11,9 +11,7 @@ import 'swiper/css/pagination';
 const acc = new Accordion('.accordion-container', {
   duration: 400, // Длительность анимации (в миллисекундах)
   showMultiple: false, // Разрешить открывать несколько панелей одновременно
-  onOpen: function (currentElement) {
-    console.log(currentElement); // Логирование текущего открытого элемента
-  },
+  onOpen: function (currentElement) {},
 });
 
 acc.open(0);
