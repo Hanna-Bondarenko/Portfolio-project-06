@@ -1,14 +1,7 @@
 @import url('swiper/css/bundle');
 
-@media screen and (min-width: 1440px) {
-  .inner-container {
-    display: flex;
-    flex-direction: row;
-  }
-  .projects-text-container,
-  .projects-swiper-container {
-    flex-basis: calc(100% / 2);
-  }
+.projects-section {
+  padding-bottom: 0;
 }
 
 .projects-section-title {
@@ -21,18 +14,34 @@
   color: rgba(250, 250, 250, 0.4);
   transition: color 0.8s ease-in-out;
 }
-
 .projects-section:hover .projects-section-title {
   color: #fafafa;
 }
 
-.inner-container {
-  padding-bottom: 84px;
-  position: relative;
+/* =======Styles for swiper-container======= */
+.projects-section .projects-swiper-container {
+  width: 100%;
+  height: 928px;
 }
 @media screen and (min-width: 768px) {
-  .inner-container {
-    padding-bottom: 132px;
+  .projects-section .projects-swiper-container {
+    height: 1379px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .projects-section .projects-swiper-container {
+    height: 813px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .projects-section .projects-item {
+    display: flex;
+    flex-direction: row;
+  }
+  .projects-text-container,
+  .projects-image-container {
+    flex-basis: calc(100% / 2);
   }
 }
 
@@ -125,44 +134,26 @@
   }
 }
 
-/* =======Styles for swiper-image-container======= */
-.projects-swiper-container {
+/* =======Styles for image-container======= */
+.projects-image-container {
+  display: block;
+  padding: 100px 16px;
   border-radius: 0 0 24px 24px;
   background: #242527;
 }
-@media screen and (min-width: 1440px) {
-  .projects-swiper-container {
-    border-radius: 0 24px 24px 0;
-  }
-}
-
-.projects-list {
-  padding: 100px 16px;
-}
 @media screen and (min-width: 768px) {
-  .projects-list {
+  .projects-image-container {
     padding: 120px 45px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .projects-list {
+  .projects-image-container {
     padding-right: 37px;
     padding-left: 37px;
+    border-radius: 0 24px 24px 0;
   }
 }
 
-/* @media screen (min-width: 320px) and (max-width: 374px) {
-  .projects-swiper-container img {
-    width: 100%;
-    height: auto;
-  }
-} */
-@media screen and (min-width: 375px) {
-  .projects-item img {
-    width: 311px;
-    height: 195px;
-  }
-}
 @media screen and (min-width: 768px) {
   .projects-item img {
     width: 614px;
@@ -171,11 +162,6 @@
 }
 
 /* =======Styles for swiper-arrow-container======= */
-.projects-section .swiper {
-  position: static;
-  margin: 0;
-}
-
 .swiper-button-prev,
 .swiper-button-next {
   transition: box-shadow 0.8s ease-in-out, background 0.8s ease-in-out;
@@ -188,7 +174,7 @@
 }
 .swiper-custom-arrows {
   position: absolute;
-  bottom: 0;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;

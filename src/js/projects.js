@@ -6,6 +6,7 @@ const swiperProjects = new Swiper('.projects-swiper-container', {
   direction: 'horizontal',
   autoHeight: true,
   speed: 1000,
+  spaceBetween: 48,
   keyboard: { enabled: true, onlyInViewport: false },
   mousewheel: true,
   allowTouchMove: true,
